@@ -1,5 +1,7 @@
 package com.example.assignment01;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +32,7 @@ public class Student {
         return firstName;
     }
 
-/*
+/**
     This method sets the instance variable this.firstName to whatever the user passes as an argument for the firstName.
     It will capitalize the first letter of the firstname provided, remove white spaces, and also check to see if its length is greater or equal to 2.
  */
@@ -68,7 +70,7 @@ public class Student {
         return studentNumber;
     }
 
-    /*
+    /**
     This method will set the instance variable this.studentNumber only if its in the range of 1000000 -> 9999999.
      */
     public void setStudentNumber(int studentNumber) {
@@ -94,7 +96,7 @@ public class Student {
         return "Firstname: " + firstName + " Lastname: " + lastName + " StudentNumber: " + studentNumber;
     }
 
-    /*
+    /**
         This method adds the students favourite activities to a list called favouriteActivities. If the activity contains a number, it will throw an error.
      */
 public void activities (String activities)
@@ -110,16 +112,22 @@ public void activities (String activities)
 
       favouriteActivities.add(activities);
 
-
   }
-    /*
+    /**
     This method will return all the activities in the list.
      */
-  public String showactivities()
+  public String showActivities()
     {
         return favouriteActivities.toString();
     }
 
+    /**
+    This method will get the image depending on the student
+     */
+    public Image getImage(){
+      String pathName = "images/"+firstName+".jpg";
+      return new Image(Student.class.getResourceAsStream(pathName));
+    }
 
 
 }

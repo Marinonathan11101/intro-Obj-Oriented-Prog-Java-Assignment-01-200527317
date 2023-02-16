@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class StudentApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Assignment-01-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StudentApplication.class.getResource("Assignment-01.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Student Card");
         stage.setScene(scene);
@@ -20,4 +20,6 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+
 }
